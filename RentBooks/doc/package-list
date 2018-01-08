@@ -1,0 +1,8 @@
+com.impetus.bookstore
+com.impetus.bookstore.configuration
+com.impetus.bookstore.exception
+com.impetus.bookstore.persistance
+com.impetus.bookstore.persistance.entities
+com.impetus.bookstore.services
+com.impetus.bookstore.utils
+com.impetus.bookstore.webmodel

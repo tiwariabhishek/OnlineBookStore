@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		  http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing 
+		infrastructure -->
+
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<!-- <annotation-driven /> -->
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving 
+		up static resources in the ${webappRoot}/resources directory -->
+	<!-- <resources mapping="/resources/**" location="/resources/" /> -->
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources 
+		in the /WEB-INF/views directory -->
+	<!-- <beans:bean -->
+	<!-- class="org.springframework.web.servlet.view.InternalResourceViewResolver"> -->
+	<!-- <beans:property name="prefix" value="/WEB-INF/views/" /> -->
+	<!-- <beans:property name="suffix" value=".jsp" /> -->
+	<!-- </beans:bean> -->
+
+	<!-- <context:component-scan base-package="com.impetus.bookstore" /> -->
+
+	<!-- <beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" -->
+	<!-- destroy-method="close"> -->
+	<!-- <beans:property name="driverClassName" value="com.mysql.jdbc.Driver" 
+		/> -->
+	<!-- <beans:property name="url" value="jdbc:mysql://localhost:3306/test" 
+		/> -->
+	<!-- <beans:property name="username" value="root" /> -->
+	<!-- <beans:property name="password" value="impetus123#" /> -->
+	<!-- </beans:bean> -->
+
+	<!-- Hibernate 4 SessionFactory Bean definition -->
+	<!-- <beans:bean id="sessionFactory" -->
+	<!-- class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> -->
+	<!-- <beans:property name="dataSource" ref="dataSource" /> -->
+	<!-- <beans:property name="packagesToScan" value="com.impetus.bookstore.dbmodel" 
+		/> -->
+	<!-- <beans:property name="annotatedClasses"> -->
+	<!-- <beans:list> -->
+	<!-- <beans:value>com.impetus.bookstore.dbmodel.UserDetails</beans:value> -->
+	<!-- </beans:list> -->
+	<!-- </beans:property> -->
+	<!-- <beans:property name="hibernateProperties"> -->
+	<!-- <beans:props> -->
+	<!-- <beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect -->
+	<!-- </beans:prop> -->
+	<!-- <beans:prop key="hibernate.show_sql">true</beans:prop> -->
+	<!-- <beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop> -->
+	<!-- </beans:props> -->
+	<!-- </beans:property> -->
+	<!-- </beans:bean> -->
+	<!-- <beans:bean id="multipartResolver" -->
+	<!-- class="org.springframework.web.multipart.commons.CommonsMultipartResolver" 
+		/> -->
+
+	<!-- <tx:annotation-driven /> -->
+	<!-- <beans:bean id="transactionManager" -->
+	<!-- class="org.springframework.orm.hibernate4.HibernateTransactionManager"> -->
+	<!-- <beans:property name="sessionFactory" ref="sessionFactory" /> -->
+	<!-- </beans:bean> -->
+	<!-- <beans:bean id="runMeTask" class="com.impetus.bookstore.utils.MyTask1" 
+		/> -->
+	<!-- <bean id="csvParserScheduler" class="com.impetus.bookstore.utils.CsvParserScheduler" 
+		/> -->
+
+	<!-- Spring Quartz -->
+	<!-- <beans:bean name="runMeJob" -->
+	<!-- class="org.springframework.scheduling.quartz.JobDetailBean"> -->
+
+	<!-- <beans:property name="jobClass" -->
+	<!-- value="com.impetus.bookstore.utils.SchedulerService" /> -->
+	<!-- class of job -->
+
+	<!-- <beans:property name="jobDataAsMap"> -->
+	<!-- <beans:map> -->
+	<!-- <beans:entry key="runMeTask" value-ref="runMeTask" /> -->
+	<!-- <entry key="csvParserScheduler" value-ref="csvParserScheduler" /> -->
+	<!-- </beans:map> -->
+	<!-- </beans:property> -->
+	<!-- method to run -->
+
+	<!-- </beans:bean> -->
+
+
+
+	<!-- Simple Trigger, run every 5 seconds -->
+	<!-- <bean id="simpleTrigger" -->
+	<!-- class="org.springframework.scheduling.quartz.SimpleTriggerBean"> -->
+
+	<!-- <property name="jobDetail" ref="runMeJob" /> -->
+	<!-- <property name="repeatInterval" value="10000" /> -->
+	<!-- <property name="startDelay" value="1000" /> -->
+
+	<!-- </bean> -->
+
+	<!-- Cron Trigger, run every 5 seconds -->
+	<!-- <beans:bean id="cronTrigger" -->
+	<!-- class="org.springframework.scheduling.quartz.CronTriggerBean"> -->
+
+	<!-- <beans:property name="jobDetail" ref="runMeJob" /> -->
+	<!-- <beans:property name="cronExpression" value="0/5 * * * * ?" /> -->
+	<!-- <property name="cronExpression" value="0 45 22 * * ?" /> -->
+	<!-- it will trigger ar 11:40 pm -->
+
+
+
+	<!-- </beans:bean> -->
+
+	<!-- <beans:bean -->
+	<!-- class="org.springframework.scheduling.quartz.SchedulerFactoryBean"> -->
+	<!-- <beans:property name="jobDetails"> -->
+	<!-- <beans:list> -->
+	<!-- <beans:ref bean="runMeJob" /> -->
+	<!-- </beans:list> -->
+	<!-- </beans:property> -->
+
+	<!-- <beans:property name="triggers"> -->
+	<!-- <beans:list> -->
+	<!-- <beans:ref bean="cronTrigger" /> -->
+	<!-- </beans:list> -->
+	<!-- </beans:property> -->
+	<!-- </beans:bean> -->
+</beans:beans>

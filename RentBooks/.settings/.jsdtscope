@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="src/main/webapp/resources/js/foundation.min.js|src/main/webapp/resources/js/foundation/foundation.js|src/main/webapp/resources/js/jquery-1.11.1.min.js|src/main/webapp/resources/js/jquery-ui.min.js|src/main/webapp/resources/js/jquery.validate.min.js|src/main/webapp/resources/js/vendor/jquery.js|src/main/webapp/resources/js/vendor/modernizr.js" kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
