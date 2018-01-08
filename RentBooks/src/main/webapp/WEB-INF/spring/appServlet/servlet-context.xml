@@ -27,7 +27,7 @@
 	<!-- <beans:property name="suffix" value=".jsp" /> -->
 	<!-- </beans:bean> -->
 
-	<!-- <context:component-scan base-package="com.impetus.bookstore" /> -->
+	<!-- <context:component-scan base-package="com.weblearning.bookstore" /> -->
 
 	<!-- <beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" -->
 	<!-- destroy-method="close"> -->
@@ -36,18 +36,18 @@
 	<!-- <beans:property name="url" value="jdbc:mysql://localhost:3306/test" 
 		/> -->
 	<!-- <beans:property name="username" value="root" /> -->
-	<!-- <beans:property name="password" value="impetus123#" /> -->
+	<!-- <beans:property name="password" value="weblearning123#" /> -->
 	<!-- </beans:bean> -->
 
 	<!-- Hibernate 4 SessionFactory Bean definition -->
 	<!-- <beans:bean id="sessionFactory" -->
 	<!-- class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"> -->
 	<!-- <beans:property name="dataSource" ref="dataSource" /> -->
-	<!-- <beans:property name="packagesToScan" value="com.impetus.bookstore.dbmodel" 
+	<!-- <beans:property name="packagesToScan" value="com.weblearning.bookstore.dbmodel"
 		/> -->
 	<!-- <beans:property name="annotatedClasses"> -->
 	<!-- <beans:list> -->
-	<!-- <beans:value>com.impetus.bookstore.dbmodel.UserDetails</beans:value> -->
+	<!-- <beans:value>com.weblearning.bookstore.dbmodel.UserDetails</beans:value> -->
 	<!-- </beans:list> -->
 	<!-- </beans:property> -->
 	<!-- <beans:property name="hibernateProperties"> -->
@@ -68,9 +68,9 @@
 	<!-- class="org.springframework.orm.hibernate4.HibernateTransactionManager"> -->
 	<!-- <beans:property name="sessionFactory" ref="sessionFactory" /> -->
 	<!-- </beans:bean> -->
-	<!-- <beans:bean id="runMeTask" class="com.impetus.bookstore.utils.MyTask1" 
+	<!-- <beans:bean id="runMeTask" class="com.weblearning.bookstore.utils.MyTask1"
 		/> -->
-	<!-- <bean id="csvParserScheduler" class="com.impetus.bookstore.utils.CsvParserScheduler" 
+	<!-- <bean id="csvParserScheduler" class="com.weblearning.bookstore.utils.CsvParserScheduler"
 		/> -->
 
 	<!-- Spring Quartz -->
@@ -78,7 +78,7 @@
 	<!-- class="org.springframework.scheduling.quartz.JobDetailBean"> -->
 
 	<!-- <beans:property name="jobClass" -->
-	<!-- value="com.impetus.bookstore.utils.SchedulerService" /> -->
+	<!-- value="com.weblearning.bookstore.utils.SchedulerService" /> -->
 	<!-- class of job -->
 
 	<!-- <beans:property name="jobDataAsMap"> -->

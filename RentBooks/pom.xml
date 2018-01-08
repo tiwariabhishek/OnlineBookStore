@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.impetus</groupId>
+	<groupId>com.weblearning</groupId>
 	<artifactId>bookstore</artifactId>
 	<name>RentBooks</name>
 	<packaging>war</packaging>
@@ -300,9 +300,9 @@
 			<!-- </executions> -->
 			<!-- <configuration> -->
 			<!-- <excludes> -->
-			<!-- <exclude>**/com/impetus/bookstore/controller/*.java</exclude> -->
-			<!-- <exclude>**/com/impetus/bookstore/configuration/*.java</exclude> -->
-			<!-- <exclude>**/com/impetus/bookstore/dto/*.java</exclude> -->
+			<!-- <exclude>**/com/weblearning/bookstore/controller/*.java</exclude> -->
+			<!-- <exclude>**/com/weblearning/bookstore/configuration/*.java</exclude> -->
+			<!-- <exclude>**/com/weblearning/bookstore/dto/*.java</exclude> -->
 			<!-- </excludes> -->
 			<!-- </configuration> -->
 			<!-- </plugin> -->

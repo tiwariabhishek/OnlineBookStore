@@ -20,7 +20,7 @@
 	</appender>
 
 	<!-- Application Loggers -->
-	<logger name="com.impetus.bookstore">
+	<logger name="com.weblearning.bookstore">
 		<level value="info" />
 	</logger>
 
